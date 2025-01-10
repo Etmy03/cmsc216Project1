@@ -1,0 +1,27 @@
+
+# This test will test for case insensitivity
+
+MoV r0 0x15
+# 1011 0000 0001 0101 / B015
+
+mOv R1 0X1
+# 1011 0001 0000 0001 / B101
+
+aDd r2 R0 r1
+# 0000 0010 0000 0001 / 0201
+
+
+# Congratulations if you made it past that
+
+# Now for case sensitivity in Hex numbers
+
+BeQ 0xFea
+# 1101 1111 1110 1010 / DFEA
+
+B 0X1aC
+# 1100 0001 1010 1100 / C1AC
+
+bEq 0xd
+# 1101 0000 0000 1101 / D00D
+
+# Correct Output: B015B1010201DFEAC1ACD00D

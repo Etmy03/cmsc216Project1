@@ -1,0 +1,18 @@
+# Comments have a pound-character as the first character of the line
+# Instructions contain from 0-3 operands
+ADD R1 R1 R2
+
+# Blank lines are allowed
+
+# Square brackets are required, but don't change the output
+LDR R4	[R10]
+STR R4	[R15]
+
+CMP R0	R12
+
+# Notice the negative decimal value 
+MOV R15	0XFF
+
+# Notice the hexadecimal value, either is allowed
+B 	0x100
+END

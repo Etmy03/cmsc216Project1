@@ -1,0 +1,31 @@
+
+# This test will test for weird whitespace
+
+# This line has tabs
+MOV R1  0x0
+# 1011 0001 0000 0000 / B100
+
+# This line has double spaces
+MOV  R2  0x1
+# 1011 0010 0000 0001 / B201
+
+# This line has double spaces and tabs
+ADD  R1     R1      R2
+# 0000 0001 0001 0010 / 0112
+
+# This line has trailing spaces
+MOV R3 0xF      
+# 1011 0011 0000 1111 / B30F
+
+# This line has spaces before it
+    LDR R5 [R1]
+# 1000 0101 0001 0000 / 8510
+
+# This line has spaces before and after it
+   BEQ 0x3  
+# 1101 0000 0000 0011 / D003
+
+
+# Congratulations if you have successfully passed this test
+
+# Correct Output: B100B2010112B30F8510D003
